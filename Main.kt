@@ -1,8 +1,10 @@
 import java.util.*
-class EmpWageBuilder : WageBuilder{
-        private var numOfCompany = 0
-        override val companyEmpWage: Array<CompanyEmpWage?> = arrayOfNulls(5)
+import kotlin.collections.ArrayList
 
+class EmpWageBuilder : WageBuilder{
+
+        private var numOfCompany = 0
+        val companyEmpWage = ArrayList<CompanyEmpWage>()
 
         override fun addCompanyEmpWage(
                 company: String,
@@ -10,7 +12,7 @@ class EmpWageBuilder : WageBuilder{
                 maxHoursPerMonth: Int,
                 maxDaysPerMonth: Int
         ) {
-                companyEmpWage[numOfCompany] = CompanyEmpWage(company, wagePerHour, maxHoursPerMonth, maxDaysPerMonth)
+                companyEmpWage.add(CompanyEmpWage(company, wagePerHour, maxHoursPerMonth, maxDaysPerMonth))
                 companyEmpWage[numOfCompany]!!.computeEmpWage()
                 numOfCompany += 1
 
