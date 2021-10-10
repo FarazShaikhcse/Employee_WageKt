@@ -7,18 +7,14 @@ class Attendance(val empWage: EmployeeWage) {
         val attendanceCheck = (0..2).random()
         when (attendanceCheck) {
             1 -> {
-                println("Full time Employee")
                 fulldayhour = 8
                 empWage.totworkingdays += 1
             }
             2 -> {
-                println("Part time Employee")
                 fulldayhour = 4
                 empWage.totworkingdays += 1
             }
-            else -> {
-                println("Employee absent")
-            }
+
         }
         empWage.totworkinghours += fulldayhour
 

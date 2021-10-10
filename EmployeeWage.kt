@@ -6,9 +6,10 @@ class EmployeeWage(val company: String, val wageph: Int,val total_working_days: 
     val dailyWage=DailyWage(this)
 
     fun computeEmpWage(){
-    while(totworkinghours<total_working_hours||totworkingdays<total_working_days){
+    while(totworkinghours<total_working_hours && totworkingdays<total_working_days){
         totalWage+=dailyWage.computeDailyWage()
     }
     println("Monthly wage of employee is ${totalWage}")
+
     }
 }
