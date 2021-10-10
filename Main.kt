@@ -1,5 +1,4 @@
 import java.util.*
-import kotlin.collections.ArrayList
 
 class EmpWageBuilder : WageBuilder{
 
@@ -17,6 +16,14 @@ class EmpWageBuilder : WageBuilder{
                 companyEmpWage.add(CompanyEmpWage(company, wagePerHour, maxHoursPerMonth, maxDaysPerMonth))
                 companyEmpWage[numOfCompany]!!.computeEmpWage()
                 numOfCompany += 1
+        }
+        fun getTotalWage(company: String): Int {
+                for (cmp in companyEmpWage) {
+                        if (cmp.company == company) {
+                                return cmp.totalWage
+                        }
+                }
+                return 0
         }
 }
 fun main() {
@@ -38,6 +45,9 @@ fun main() {
                 val hours: Int = scanner.nextInt()
                 empWageBuilder.addCompanyEmpWage(name, wage, hours, days);
         }
+        println("Enter the name of company whose total wage is needed")
+        val name = scanner.next()
+        println("Total employee wage for the company is " + empWageBuilder.getTotalWage(name))
 
 
 }
