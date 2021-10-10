@@ -1,4 +1,4 @@
-class DailyWage(val empWage: EmployeeWage) {
+class DailyWage(val empWage: CompanyEmpWage) {
     val WAGE_PER_HOUR = 20
     var empwageamt = 0
     val attendance=Attendance(empWage)

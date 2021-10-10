@@ -1,4 +1,4 @@
-class EmployeeWage(val company: String, val wageph: Int,val total_working_days: Int,val total_working_hours: Int) {
+class CompanyEmpWage(val company: String, val wageph: Int, val total_working_days: Int, val total_working_hours: Int) {
 
     var totalWage:Int=0
     var totworkinghours=0

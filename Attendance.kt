@@ -1,4 +1,4 @@
-class Attendance(val empWage: EmployeeWage) {
+class Attendance(val empWage: CompanyEmpWage) {
     val IS_FULL_TIME = 1
     val IS_PART_TIME = 2
     var fulldayhour = 0
@@ -13,6 +13,9 @@ class Attendance(val empWage: EmployeeWage) {
             2 -> {
                 fulldayhour = 4
                 empWage.totworkingdays += 1
+            }
+            else -> {
+                fulldayhour = 0
             }
 
         }
