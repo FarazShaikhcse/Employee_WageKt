@@ -2,8 +2,7 @@ import java.util.*
 class EmpWageBuilder : WageBuilder{
         private var numOfCompany = 0
         override val companyEmpWage: Array<CompanyEmpWage?> = arrayOfNulls(5)
-
-
+        
         override fun addCompanyEmpWage(
                 company: String,
                 wagePerHour: Int,
