@@ -1,11 +1,11 @@
-object DailyWage {
-    const val WAGE_PER_HOUR = 20
+class DailyWage(empWage: EmpWage) {
+    val WAGE_PER_HOUR = 20
     var empwage = 0
+    val attendance=Attendance(empWage)
+    fun computeDailyWage(): Int {
+        empwage = attendance.attendance() * WAGE_PER_HOUR
+        println("Employee Daily wage= ${empwage}")
+        return empwage
+    }
 }
-fun computeDailyWage() : Int{
-    DailyWage.empwage = attendance() * DailyWage.WAGE_PER_HOUR
-    println("Employee Daily wage= ${DailyWage.empwage}")
-    return  DailyWage.empwage
-}
-
 
