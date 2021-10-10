@@ -3,8 +3,10 @@ import kotlin.collections.ArrayList
 
 class EmpWageBuilder : WageBuilder{
 
+
         private var numOfCompany = 0
         val companyEmpWage = ArrayList<CompanyEmpWage>()
+
 
         override fun addCompanyEmpWage(
                 company: String,
