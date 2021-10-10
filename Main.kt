@@ -1,9 +1,15 @@
 import java.util.*
-class EmpWageBuilder{
+class EmpWageBuilder : WageBuilder{
         private var numOfCompany = 0
-        var companyEmpWage: Array<CompanyEmpWage?> = arrayOfNulls(5)
+        override val companyEmpWage: Array<CompanyEmpWage?> = arrayOfNulls(5)
 
-        fun addCompanyEmpWage(company: String, wagePerHour: Int, maxHoursPerMonth: Int, maxDaysPerMonth: Int) {
+
+        override fun addCompanyEmpWage(
+                company: String,
+                wagePerHour: Int,
+                maxHoursPerMonth: Int,
+                maxDaysPerMonth: Int
+        ) {
                 companyEmpWage[numOfCompany] = CompanyEmpWage(company, wagePerHour, maxHoursPerMonth, maxDaysPerMonth)
                 companyEmpWage[numOfCompany]!!.computeEmpWage()
                 numOfCompany += 1
