@@ -12,15 +12,18 @@ fun attendance() : Int {
             1 -> {
                 println("Full time Employee")
                 Attendance.fulldayhour = 8
+                MonthlyWage.totworkingdays+=1
             }
             2 -> {
                 println("Part time Employee")
                 Attendance.fulldayhour = 4
+                MonthlyWage.totworkingdays+=1
             }
             else -> {
                 println("Employee absent")
             }
         }
+        MonthlyWage.totworkinghours+=Attendance.fulldayhour
 
         return Attendance.fulldayhour
 }
