@@ -1,8 +1,7 @@
-class Attendance(val empWage: EmpWage) {
+class Attendance(val empWage: EmployeeWage) {
     val IS_FULL_TIME = 1
     val IS_PART_TIME = 2
     var fulldayhour = 0
-
 
     fun attendance(): Int {
         val attendanceCheck = (0..2).random()
